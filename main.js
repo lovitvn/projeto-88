@@ -68,7 +68,7 @@ document.getElementById("myCanvas").style.borderColor="red";}
 			console.log("right");
 		}
 	}
-	
+}
 	function up()
 	{
 		// Escreva o código para mover a bola para cima.
@@ -79,7 +79,6 @@ document.getElementById("myCanvas").style.borderColor="red";}
 			newImage();
 		}
 	}
-	newImage()
 	function down() {
 		if(ball_y <=450){
 	ball_y = ball_y + block_image_height;
@@ -91,7 +90,8 @@ document.getElementById("myCanvas").style.borderColor="red";}
 	{
 		if(ball_X >5)
 		{
-			// Escreva o código para mover a bola para a esquerda.
+			canvas.remove(ball_obj);
+			new_image();
 		}
 	}
 
@@ -100,6 +100,9 @@ document.getElementById("myCanvas").style.borderColor="red";}
 		if(ball_X <=1050)
 		{
 			// Escreva o código para mover a bola para a direita.
+			if(ball_x <=1050)
+			canvas.remove(ball_obj);
+			new_image();
 		}
 	}
 	
